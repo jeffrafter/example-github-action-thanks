@@ -1,4 +1,4 @@
-name: "Commit workflow"
+name: "Thanks workflow"
 on: [issues]
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 1
       - run: npm install
       - run: npm run build
-      - uses: ./.github/actions/commit-action
+      - uses: ./.github/actions/thanks-action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        id: commit
+        id: thanks
