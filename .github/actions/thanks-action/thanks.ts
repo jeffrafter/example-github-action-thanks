@@ -11,7 +11,8 @@ const run = async (): Promise<void> => {
     if (!issue) return
 
     // Create the octokit client
-    const octokit: github.GitHub = new github.GitHub(process.env['GITHUB_TOKEN'] || '')
+    const token = process.env['THANKS_USER_TOKEN'] || process.env['GITHUB_TOKEN'] || ''
+    const octokit: github.GitHub = new github.GitHub(token)
     const nwo = process.env['GITHUB_REPOSITORY'] || '/'
     const [owner, repo] = nwo.split('/')
 
