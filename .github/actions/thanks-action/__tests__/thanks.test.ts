@@ -1,6 +1,8 @@
-import * as core from '@actions/core'
+// import * as core from '@actions/core'
 import * as github from '@actions/github'
-import run from '../thanks'
+// import run from '../thanks'
+import fs from 'fs'
+import yaml from 'js-yaml'
 import {WebhookPayload} from '@actions/github/lib/interfaces'
 
 beforeEach(() => {
